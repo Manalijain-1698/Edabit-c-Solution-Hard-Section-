@@ -1,0 +1,9 @@
+using System.Linq;
+
+public class Program 
+{
+    public static int SockPairs(string socks) 
+    {
+			  return socks.ToCharArray().GroupBy(c => c).Select(c => c.Count() / 2 ).Sum();
+    }
+}

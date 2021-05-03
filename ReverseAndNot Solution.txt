@@ -1,0 +1,23 @@
+using System;
+using System.Linq;
+public class Program
+{
+    public static string ReverseAndNot(int i) {
+			int reminder, reverse = 0;
+			string originalnum=i.ToString();
+			while (i > 0)
+            {
+                //Get the remainder by dividing the number with 10  
+                reminder = i % 10;
+                //multiply the sum with 10 and then add the reminder
+                reverse = (reverse * 10) + reminder;
+                //Get the quotient by dividing the number with 10 
+                i = i / 10;
+            }
+			
+			
+			
+			return reverse.ToString()+originalnum;
+		
+		}
+}

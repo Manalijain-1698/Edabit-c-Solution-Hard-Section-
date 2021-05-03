@@ -1,0 +1,16 @@
+using System;
+
+public class Program 
+{
+	public static int[] limits = new int[] { 5, 5, 10, 10, 15, 15, 20, 20 };
+
+    public static string Interview(int[] arr, int tot) {
+        if (tot <= 120 && arr.Length == 8) {
+            for (int i = 0; i < arr.Length; i++)
+                if (arr[i] > limits[i])
+                    return "disqualified";
+            return "qualified";
+        }
+        return "disqualified";
+    }
+}

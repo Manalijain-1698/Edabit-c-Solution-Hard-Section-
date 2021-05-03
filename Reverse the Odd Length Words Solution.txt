@@ -1,0 +1,15 @@
+using System;
+using System.Linq;
+public class Program
+{
+	public static string ReverseOdd(string str) {
+		string[]words = str.Split(' ');
+		
+		for(int i=0;i<words.Length;i++){
+			if(words[i].Length % 2 ==1){
+				words[i]= string.Join("",words[i].Reverse().ToArray());
+			}
+		}
+		return string.Join(" ",words);
+	}
+}

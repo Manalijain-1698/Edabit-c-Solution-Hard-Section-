@@ -1,0 +1,12 @@
+using System;
+public class Program
+{
+    public static bool Cons(int[] arr)
+    {
+        Array.Sort(arr);
+        for (int i = 1; i < arr.Length; i++)
+            if (arr[i] - arr[i - 1] != 1)
+                return false;
+        return true;
+    }
+}

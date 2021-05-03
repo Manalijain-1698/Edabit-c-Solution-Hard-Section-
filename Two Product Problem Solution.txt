@@ -1,0 +1,21 @@
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+public class Program
+{
+  public static int[] TwoProduct(int[] arr, int n) {
+           List<int> result = new List<int>();
+            foreach (int i in arr)
+            {
+                foreach (int j in arr)
+                {
+                    if (i * j == n)
+                    {
+                        result.Add(j);
+                    }
+                }
+            }
+            return result.OrderBy(s => s).ToArray();
+  } 
+}
